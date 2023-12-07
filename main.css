@@ -1,0 +1,14 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+    margin-top: 20px;
+}
