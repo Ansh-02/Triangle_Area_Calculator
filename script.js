@@ -1,23 +1,18 @@
+
+
+
 function calculateArea() {
+  var base = parseFloat(document.getElementById("base").value);
+  var height = parseFloat(document.getElementById("height").value);
 
-    var sideA = parseFloat(document.getElementById('sideA').value);
-    var sideB = parseFloat(document.getElementById('sideB').value);
-    var sideC = parseFloat(document.getElementById('sideC').value);
+  if (isNaN(base) || isNaN(height) || base <= 0 || height <= 0) {
+    alert("Please enter valid positive numbers for base and height.");
+    return;
+  }
 
+  var area = 0.5 * base * height;
 
-    if (sideA + sideB > sideC && sideB + sideC > sideA && sideC + sideA > sideB) {
-
-        var s = (sideA + sideB + sideC) / 2;
-
-
-        var area = Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
-
-
-        document.getElementById('result').innerHTML = 'The area of the triangle is: ' + area.toFixed(2);
-    } else {
-
-        document.getElementById('result').innerHTML = 'Invalid triangle! Please enter valid side lengths.';
-    }
+  var resultElement = document.getElementById("result");
+  resultElement.textContent =
+    "Triangle Area: " + area.toFixed(2) + " square units";
 }
-
-
